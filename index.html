@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>AllMusic | Fake Record Reviews, Fake Editor's Choices, Fake Albums</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-first-row">
+                <h1><span class="text-blue">ALL</span>MUSIC</h1>
+                <form action="#"><input type="text" name="allmusic-search" id="allmusic-search" placeholder="Search" size="30"></form>
+            </div>
+            <div class="header-second-row">
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#">New Releases</a></li>
+                        <li class="nav-item"><a href="#">Discover</a></li>
+                        <li class="nav-item"><a href="#">Articles</a></li>
+                        <li class="nav-item"><a href="#">Recommendations</a></li>
+                        <li class="nav-item"><a href="#">My Profile</a></li>
+                        <li class="nav-item"><a href="#">Advanced Search</a></li>
+                    </ul>
+                </nav>
+                <!-- <nav class="social-media">
+                    <div class="fa fa-twitter fa-stack-1x"></div>
+                    <div class="fa-solid fa-blog"></div>
+                    <div></div>
+                    <div></div>
+                </nav> -->
+            </div>
+        </div>
+    </header>
+
+    <section class="slide-show">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/1000/420" style="width:100%">
+            <div class="text">
+                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit Repellendus quia eos similique eum sit tempore</div>
+            </div>
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/1001/420" style="width:100%">
+            <div class="text">
+                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit Repellendus quia eos similique eum sit tempore</div>
+            </div>
+            </div>
+        
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/1002/420" style="width:100%">
+            <div class="text">
+                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit Repellendus quia eos similique eum sit tempore</div>
+            </div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div class="the-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+        <br>
+        
+
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        </script>
+
+    </section>
+
+
+
+    <div class="releases">
+        <div class="releases-1">
+            <div class="releases-heading">
+            <h2 class="heading-new-releases">Featured New Releases</h2>
+            <h3><a href="#">All Featured New Releases</a></h3>
+        </div>
+            <section class="new-releases">
+                <div class="new-release">
+                    <img src="https://picsum.photos/180" alt="" class="thumbnail">
+                    <div class="artist-name">Lorem ipsum</div>
+                    <div class="album-title">Lorem ipsum dolor sit</div>
+                    <div class="genre">Lorem</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Lorem ipsum dolor sit amet consectetur adipisicing elit Sit numquam</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/182" alt="" class="thumbnail">
+                    <div class="artist-name">Voluptatem aliquid</div>
+                    <div class="album-title">Debitis dignissimos nostrum consequatur</div>
+                    <div class="genre">Quia</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Esse facilis porro dignissimos non Unde ducimus temporibus nihil expedita</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/183" alt="" class="thumbnail">
+                    <div class="artist-name">Qui laudantium</div>
+                    <div class="album-title">Earum culpa alias quos</div>
+                    <div class="genre">Velit</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Illo iusto tenetur maiores illum autem animi sunt consequatur aliquid</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/184" alt="" class="thumbnail">
+                    <div class="artist-name">Ex atque</div>
+                    <div class="album-title">Expedita accusantium ut laudantium</div>
+                    <div class="genre">Voluptatum</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Alias vero vel distinctio velit sequi repudiandae Ullam quo reprehenderit</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/185" alt="" class="thumbnail">
+                    <div class="artist-name">Blanditiis recusandae</div>
+                    <div class="album-title">Ad fuga molestias quas</div>
+                    <div class="genre">Sit</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Culpa perspiciatis dolor nemo quia consectetur saepe temporibus quasi Nobis</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/186" alt="" class="thumbnail">
+                    <div class="artist-name">Corporis magnam</div>
+                    <div class="album-title">Sint fugit a illum</div>
+                    <div class="genre">Numquam</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Voluptas sit aut consectetur quae soluta fugit error pariatur asperiores</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/187" alt="" class="thumbnail">
+                    <div class="artist-name">Itaque perspiciatis</div>
+                    <div class="album-title">Adipisci dolorum nobis assumenda</div>
+                    <div class="genre">Corrupti</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Qui sunt iste consequuntur explicabo eveniet tenetur rerum voluptates cupiditate</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/188" alt="" class="thumbnail">
+                    <div class="artist-name">Sapiente consequuntur</div>
+                    <div class="album-title">Voluptate nam culpa corporis</div>
+                    <div class="genre">Officiis</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Doloribus eligendi at impedit debitis necessitatibus tempora quos minima nisi</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+                <div class="new-release">
+                    <img src="https://picsum.photos/189" alt="" class="thumbnail">
+                    <div class="artist-name">Doloribus veritatis</div>
+                    <div class="album-title">Accusantium molestias consectetur vel</div>
+                    <div class="genre">Nemo</div>
+                    <div class="star-rating"></div>
+                    <div class="album-description">Necessitatibus a architecto dolorem aspernatur at nostrum ut nemo quaerat</div>
+                    <div class="album-description-author">- Richard Bachman</div>
+                </div>
+            </section>
+       </div>
+
+        <div class="releases-2">
+            <div class="releases-heading">
+                <h2>Editor&apos;s Choice</h2>
+                <h3><a href="#">All Editor's Choice</a></h3>
+            </div>
+            <section class="editors-choices">
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/160" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Lorem ipsum</div>
+                    <div class="album-title">Lorem ipsum dolor sit</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/161" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Et magnam</div>
+                    <div class="album-title">Non eligendi molestias nesciunt</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/162" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Placeat sequi</div>
+                    <div class="album-title">Quo nobis amet vel</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/163" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Et officia</div>
+                    <div class="album-title">Pariatur ratione eaque dolore</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/164" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Dolorem sint</div>
+                    <div class="album-title">Quae porro dolorum quo</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/165" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Minima voluptates</div>
+                    <div class="album-title">Rem provident corrupti a</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/166" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Vel quasi</div>
+                    <div class="album-title">Aspernatur nesciunt veniam sequi</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/167" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Voluptates laudantium</div>
+                    <div class="album-title">Nesciunt perspiciatis magnam rem</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/168" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Non dolor</div>
+                    <div class="album-title">Doloribus deleniti dolorum porro</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/169" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Omnis praesentium</div>
+                    <div class="album-title">Labore consectetur Nemo quaerat</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/160" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Nobis cupiditate</div>
+                    <div class="album-title">Nesciunt labore eos natus</div></div>
+                </div>
+                <div class="editors-choice">
+                    <img src="https://picsum.photos/161" alt="" class="thumbnail">
+<div class="info">                    <div class="artist-name">Ea sint</div>
+                    <div class="album-title">Architecto similique nemo soluta</div></div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Ipsum repellendus totam ad</div>
+            <div>Culpa harum accusamus quia</div>
+            <div>Doloremque vel dolore numquam</div>
+        </div>
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Assumenda neque aut dolor</div>
+            <div>Quod saepe assumenda in</div>
+            <div>Dolores voluptatem vitae temporibus</div>
+        </div>
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Molestias eius expedita eum</div>
+            <div>Distinctio dolor porro ullam</div>
+            <div>Culpa ipsa ratione id</div>
+        </div>
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Aliquam quod consequuntur Perspiciatis</div>
+            <div>Provident quae aliquam labore</div>
+            <div>Totam possimus qui aspernatur</div>
+        </div>
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Corporis impedit et cupiditate</div>
+            <div>Sequi dolorum doloremque voluptas</div>
+            <div>Nam necessitatibus harum aut</div>
+        </div>
+        <div>
+            <div>Lorem ipsum dolor sit</div>
+            <div>Aliquam quisquam dolores dolorum</div>
+            <div>Impedit temporibus explicabo deleniti</div>
+            <div>At nihil nostrum ex</div>
+        </div>
+        <div class="sign-up">
+            <div>SIGN UP FOR OUR WEEKLY NEW RELEASES NEWSLETTER</div>
+            <form action="#" method="get">
+                <input type="text" name="signup" id="signup" placeholder="name@domain.com" size="40">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+        <div class="copyright">&copy; 2022 Not AllMusic - NOT ALL RIGHTS RESERVED</div>
+    </div>
+    </footer>
+
+</body>
+</html>
